@@ -1,0 +1,3 @@
+﻿  Source.cpp
+C:\Git\CPP\Fundamentals\snakesAndLadders\snakesAndLadders\Source.cpp(115,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Git\CPP\Fundamentals\snakesAndLadders\snakesAndLadders\Source.cpp(193): error C4716: 'snakesAndLaddersSpaces': must return a value
