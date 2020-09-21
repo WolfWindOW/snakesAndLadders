@@ -7,7 +7,7 @@
 #include <ctime>
 
 int diceRoller(int howManyDice) {
-	srand(time(NULL)); //Initializing the random seed for the number generator
+	srand(time(nullptr)); //Initializing the random seed for the number generator
 
 	int diceRollerD6, totalRoll, howManyDice;
 	for (int i = 0; i < howManyDice; i++) {
