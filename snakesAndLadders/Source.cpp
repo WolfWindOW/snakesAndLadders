@@ -52,7 +52,7 @@ int main(void) {
 			diceRoller(howManyDice);
 			playerOnePosition += totalRoll;
 			temporaryPosition = playerOnePosition;
-			cout << "You moved " << totalRoll << " spaces!";
+			cout << "You moved " << totalRoll << " spaces!" << endl;
 			snakesAndLaddersSpaces(temporaryPosition);
 			if (temporaryPosition > playerOnePosition) cout << "But, you climbed a ladder!" << endl;
 			else if (temporaryPosition < playerOnePosition) cout << "But, you slid down a snake!" << endl;
@@ -66,7 +66,7 @@ int main(void) {
 			diceRoller(howManyDice);
 			playerTwoPosition += totalRoll;
 			temporaryPosition = playerTwoPosition;
-			cout << "You moved " << totalRoll << " spaces!";
+			cout << "You moved " << totalRoll << " spaces!" << endl;
 			snakesAndLaddersSpaces(temporaryPosition);
 			if (temporaryPosition > playerTwoPosition) cout << "But, you climbed a ladder!" << endl;
 			else if (temporaryPosition < playerTwoPosition) cout << "But, you slid down a snake!" << endl;
@@ -80,7 +80,7 @@ int main(void) {
 			diceRoller(howManyDice);
 			playerThreePosition += totalRoll;
 			temporaryPosition = playerThreePosition;
-			cout << "You moved " << totalRoll << " spaces!";
+			cout << "You moved " << totalRoll << " spaces!" << endl;
 			snakesAndLaddersSpaces(temporaryPosition);
 			if (temporaryPosition > playerThreePosition) cout << "But, you climbed a ladder!" << endl;
 			else if (temporaryPosition < playerThreePosition) cout << "But, you slid down a snake!" << endl;
@@ -94,7 +94,7 @@ int main(void) {
 			diceRoller(howManyDice);
 			playerFourPosition += totalRoll;
 			temporaryPosition = playerFourPosition;
-			cout << "You moved " << totalRoll << " spaces!";
+			cout << "You moved " << totalRoll << " spaces!" << endl;
 			snakesAndLaddersSpaces(temporaryPosition);
 			if (temporaryPosition > playerFourPosition) cout << "But, you climbed a ladder!" << endl;
 			else if (temporaryPosition < playerFourPosition) cout << "But, you slid down a snake!" << endl;
@@ -190,4 +190,5 @@ int snakesAndLaddersSpaces(int temporaryPosition) {
 	default:
 		break;
 	}
+	return temporaryPosition;
 }
