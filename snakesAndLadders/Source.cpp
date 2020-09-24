@@ -7,9 +7,6 @@
 #include <ctime>
 #include <queue>
 
-int diceRoller(int howManyDice);
-int snakesAndLaddersSpaces(int temporaryPosition);
-
 using namespace std;
 
 int howManyDice, totalRoll, temporaryPosition = 0;
@@ -53,11 +50,11 @@ int main(void) {
 			playerOnePosition += totalRoll;
 			temporaryPosition = playerOnePosition;
 			cout << "You moved " << totalRoll << " spaces!" << endl;
-			snakesAndLaddersSpaces(temporaryPosition);
+			temporaryPosition = snakesAndLaddersSpaces(temporaryPosition);
 			if (temporaryPosition > playerOnePosition) cout << "But, you climbed a ladder!" << endl;
 			else if (temporaryPosition < playerOnePosition) cout << "But, you slid down a snake!" << endl;
 			playerOnePosition = temporaryPosition;
-			cout << "You are now on space " << playerOnePosition << endl;
+			cout << "You are now on space " << playerOnePosition << endl << endl;
 			players.pop(); players.push(playerNameOne);
 		}
 		else if (players.front() == playerNameTwo) {
@@ -67,11 +64,11 @@ int main(void) {
 			playerTwoPosition += totalRoll;
 			temporaryPosition = playerTwoPosition;
 			cout << "You moved " << totalRoll << " spaces!" << endl;
-			snakesAndLaddersSpaces(temporaryPosition);
+			temporaryPosition = snakesAndLaddersSpaces(temporaryPosition);
 			if (temporaryPosition > playerTwoPosition) cout << "But, you climbed a ladder!" << endl;
 			else if (temporaryPosition < playerTwoPosition) cout << "But, you slid down a snake!" << endl;
 			playerTwoPosition = temporaryPosition;
-			cout << "You are now on space " << playerTwoPosition << endl;
+			cout << "You are now on space " << playerTwoPosition << endl << endl;
 			players.pop(); players.push(playerNameTwo);
 		}
 		else if (players.front() == playerNameThree) {
@@ -81,11 +78,11 @@ int main(void) {
 			playerThreePosition += totalRoll;
 			temporaryPosition = playerThreePosition;
 			cout << "You moved " << totalRoll << " spaces!" << endl;
-			snakesAndLaddersSpaces(temporaryPosition);
+			temporaryPosition = snakesAndLaddersSpaces(temporaryPosition);
 			if (temporaryPosition > playerThreePosition) cout << "But, you climbed a ladder!" << endl;
 			else if (temporaryPosition < playerThreePosition) cout << "But, you slid down a snake!" << endl;
 			playerThreePosition = temporaryPosition;
-			cout << "You are now on space " << playerThreePosition << endl;
+			cout << "You are now on space " << playerThreePosition << endl << endl;
 			players.pop(); players.push(playerNameThree);
 		}
 		else if (players.front() == playerNameFour) {
@@ -95,11 +92,11 @@ int main(void) {
 			playerFourPosition += totalRoll;
 			temporaryPosition = playerFourPosition;
 			cout << "You moved " << totalRoll << " spaces!" << endl;
-			snakesAndLaddersSpaces(temporaryPosition);
+			temporaryPosition = snakesAndLaddersSpaces(temporaryPosition);
 			if (temporaryPosition > playerFourPosition) cout << "But, you climbed a ladder!" << endl;
 			else if (temporaryPosition < playerFourPosition) cout << "But, you slid down a snake!" << endl;
 			playerFourPosition = temporaryPosition;
-			cout << "You are now on space " << playerFourPosition << endl;
+			cout << "You are now on space " << playerFourPosition << endl << endl;
 			players.pop(); players.push(playerNameFour);
 		}
 	} while (!(playerOnePosition >= 100 || playerTwoPosition >= 100 || playerThreePosition >= 100 || playerFourPosition >= 100));
@@ -186,8 +183,6 @@ int snakesAndLaddersSpaces(int temporaryPosition) {
 		break;
 	case 98:
 		temporaryPosition = 28;
-		break;
-	default:
 		break;
 	}
 	return temporaryPosition;
